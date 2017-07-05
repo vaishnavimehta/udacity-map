@@ -1,0 +1,40 @@
+.container {
+	background-color: #95a5a9;
+}
+
+body {
+	height: 100%;
+}
+
+h1,
+h5 {
+	font-family: 'Metamorphous', cursive;
+	color: white;
+}
+
+#menu li {
+	color: white;
+	font-family: "Metamorphous", cursive;
+	padding: 10px;
+	display: inline;
+}
+
+#list {
+	cursor: pointer;
+}
+
+ul{
+	margin-left: -48px;
+	margin-top: 5px;
+}
+
+#map {
+    border-radius: 12px;
+    border: 0.8px solid #95a5a9;
+    padding: 20px;
+    margin-left: 11px;
+    margin-right: 11px;
+	margin-bottom: 11px;
+    width: auto;
+    height: 450px;
+}

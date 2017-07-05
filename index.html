@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<!--head-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>National Parks Of India</title>
+		<link rel="icon" href="tree.png">
+		<link href="css/bootstrap1.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
+	</head>
+
+	<!--body-->
+	<body>
+		<div class="container">
+			<header>
+				<div class = "col-md-12">
+					<!--heading of page-->
+					<center><h1>National Parks Of India</h1></center>
+					<br>
+					<!--search bar using knockoutJS-->
+					<center><input id="searchbar" placeholder="search places" data-bind="value : search_results, valueUpdate: 'afterkeydown', event : { keyup : find }"><br>
+					<h5>For more information about places either click the marker or list.</h5></center>
+				</div>
+			</header>
+			<br>
+			<div class="row">
+				<aside>
+					<!--list of all elements using knockoutJS-->
+					<div id="menu" class="col-md-3">
+						<ul data-bind="foreach: marker_array">
+							<ul>  <li id="list" data-bind = "text: title,click: $parent.select_marker,visible:displayed"></li></ul>
+						</ul>
+					</div>
+				</aside>
+				<main>
+					<!--Map div-->
+					<div id="map" class="row"></div>
+					<!-- errormsg -->
+					<div id="errormsg" data-bind = "text : error_msg">
+					</div>
+				</main>
+			</div>
+		</div>
+		<!--scripts-->
+		<script src="js/app.js"></script>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/knockout.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdyAxP9HBORZr6aZBWgnaP3UHZuPPiTyo&v=3&callback=init" onerror="errorAlert()">
+		</script>
+	</body>
+</html>
